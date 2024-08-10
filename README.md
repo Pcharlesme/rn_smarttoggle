@@ -15,8 +15,7 @@
 
 Install the package using npm or yarn:
 
-```bash
-npm install react-native-smarttoggles
+```npm install react-native-smarttoggles
 ```
 
 ## Usage
