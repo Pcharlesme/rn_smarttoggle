@@ -1,4 +1,4 @@
-Here's the cleaned-up and formatted version of your `README.md`:
+
 
 ```markdown
 # react-native-smarttoggles
