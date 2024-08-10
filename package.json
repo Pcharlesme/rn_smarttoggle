@@ -1,14 +1,33 @@
 {
   "name": "react-native-smarttoggles",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",  
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "react-native",
+    "toggle",
+    "button",
+    "smart-toggle",
+    "customizable",
+    "UI"
+  ],
+  "author": "Emmanuel Charles <opeyemicharlese@gmail.com>",
+  "license": "MIT",
+  "description": "A customizable and smart toggle button package for React Native.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pcharlesme/rn_smarttoggle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pcharlesme/rn_smarttoggle/issues"
+  },
+  "homepage": "https://github.com/Pcharlesme/rn_smarttoggle",
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.24.0",
     "react": "^18.2.0",
@@ -18,5 +37,13 @@
     "@types/react": "^18.3.3",
     "@types/react-native": "^0.73.0",
     "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.63.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   }
 }
