@@ -1,9 +1,6 @@
 
-
-```markdown
-# react-native-smarttoggles
-
-`react-native-smarttoggles` is a customizable and smart toggle button component for React Native. It offers various customization options, including themes, custom labels, and persistent state handling.
+react-native-smarttoggles is a customizable and smart toggle button component for React Native. 
+It offers various customization options, including themes, custom labels, and persistent state handling.
 
 
 ## Usage

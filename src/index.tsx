@@ -4,14 +4,11 @@ import {
   Easing,
   StyleProp,
   Text,
-  TextStyle,
   TouchableWithoutFeedback,
-  View,
   ViewStyle,
   useColorScheme,
   AccessibilityProps,
 } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface Props extends AccessibilityProps {
   testID?: string;
@@ -56,22 +53,6 @@ const SmartToggle: React.FC<Props> = (props) => {
   const animatedValue = useRef(new Animated.Value(switchOn ? 1 : 0)).current;
 
   useEffect(() => {
-    if (persistState) {
-      const loadState = async () => {
-        try {
-          const savedState = await AsyncStorage.getItem(testID || 'smartToggle');
-          if (savedState !== null) {
-            setIsOn(JSON.parse(savedState));
-          }
-        } catch (error) {
-          console.error('Failed to load toggle state', error);
-        }
-      };
-      loadState();
-    }
-  }, [persistState, testID]);
-
-  useEffect(() => {
     const animationConfig =
       animationType === 'spring'
         ? { useNativeDriver: false }
@@ -84,19 +65,6 @@ const SmartToggle: React.FC<Props> = (props) => {
 
     startAnimation.start();
   }, [isOn, animatedValue, duration, easing, animationType]);
-
-  useEffect(() => {
-    if (persistState) {
-      const saveState = async () => {
-        try {
-          await AsyncStorage.setItem(testID || 'smartToggle', JSON.stringify(isOn));
-        } catch (error) {
-          console.error('Failed to save toggle state', error);
-        }
-      };
-      saveState();
-    }
-  }, [isOn, persistState, testID]);
 
   const handlePress = () => {
     const newState = !isOn;

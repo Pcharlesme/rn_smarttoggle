@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/Pcharlesme/rn_smarttoggle",
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^1.24.0",
     "react": "^18.2.0",
     "react-native": "^0.74.5"
   },
