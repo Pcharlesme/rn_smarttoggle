@@ -5,27 +5,13 @@
 
 `react-native-smarttoggles` is a customizable and smart toggle button component for React Native. It offers various customization options, including themes, custom labels, and persistent state handling.
 
-## Features
-
-- **Smart Themes**: Automatically adjusts the toggle appearance based on the theme.
-- **Custom Labels**: Define your own labels for the "On" and "Off" states.
-- **Persistent State**: Option to persist the toggle state across app sessions.
-
-## Installation
-
-Install the package using npm or yarn:
-
-```npm install react-native-smarttoggles
-```
 
 ## Usage
 
 Here's a simple example demonstrating how to use the `SmartToggle` component in your React Native project:
 
 ```tsx
-import React, { useState } from 'react';
-import { View, Text } from 'react-native';
-import SmartToggle from 'react-native-smarttoggles';
+
 
 const ExampleComponent = () => {
   const [isOn, setIsOn] = useState(false);

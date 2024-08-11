@@ -8,7 +8,6 @@ import {
   TouchableWithoutFeedback,
   View,
   ViewStyle,
-  Image,
   useColorScheme,
   AccessibilityProps,
 } from 'react-native';
@@ -22,12 +21,10 @@ interface Props extends AccessibilityProps {
   circleStyle?: StyleProp<ViewStyle>;
   backgroundColorOn?: string;
   backgroundColorOff?: string;
-  backgroundImageOn?: React.ReactElement;
-  backgroundImageOff?: React.ReactElement;
   circleColorOff?: string;
   circleColorOn?: string;
   duration?: number;
-  animationType?: 'timing' | 'spring' | 'decay';
+  animationType?: 'timing' | 'spring';
   easing?: (value: number) => number;
   smartTheme?: boolean;
   customLabels?: { onLabel?: string; offLabel?: string };
@@ -43,8 +40,6 @@ const SmartToggle: React.FC<Props> = (props) => {
     circleStyle,
     backgroundColorOn = '#4cd137',
     backgroundColorOff = '#ecf0f1',
-    backgroundImageOn,
-    backgroundImageOff,
     circleColorOff = 'white',
     circleColorOn = 'white',
     duration = 300,
@@ -119,7 +114,7 @@ const SmartToggle: React.FC<Props> = (props) => {
 
   const circlePosition = animatedValue.interpolate({
     inputRange: [0, 1],
-    outputRange: [2, 22], // Adjust these values based on your design
+    outputRange: [2, 22], 
   });
 
   const currentLabel = isOn ? customLabels.onLabel : customLabels.offLabel;
@@ -144,7 +139,6 @@ const SmartToggle: React.FC<Props> = (props) => {
           containerStyle,
         ]}
       >
-        {isOn ? backgroundImageOn : backgroundImageOff}
         <Animated.View
           style={[
             {
