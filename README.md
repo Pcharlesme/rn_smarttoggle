@@ -48,6 +48,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-Created by Emmanuel Charles. Feel free to reach out at [opeyemicharlese@gmail.com](mailto:opeyemicharlese@gmail.com).
+Created by Kingsley Akindele. Feel free to reach out at [kingsley.davidakindele@gmail.com](mailto:kingsley.davidakindele@gmail.com).
 ```
 
